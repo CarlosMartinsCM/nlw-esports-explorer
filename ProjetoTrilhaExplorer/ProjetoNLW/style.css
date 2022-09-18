@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    /*Considera o tamnho fixo limitado ao max-width*/
 }
 
 ul {
@@ -35,30 +35,36 @@ body * {
 header {
     margin-top: 32px;
     /* text-align: center; Alinhamento central de elementos com propriedade de texto NÃO FUNCIONA COM DIVS */
-    height: calc(120px + 32px); /*Ajuste da animation*/
+    height: calc(120px + 32px);
+    /*Ajuste da animation*/
 }
 
-header div{
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%); /*Cor de fundo, efeito */
+header div {
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    /*Cor de fundo, efeito */
     width: 120px;
     margin: auto;
 
     border-radius: 50%;
 
-    display: flex; /*Alinhamento dos elementos*/
+    display: flex;
+    /*Alinhamento dos elementos*/
     padding: 4px;
 
-    transition: transform 0.3s; /*Recebe a função de transição, e suavisa a transição em .03s*/
+    transition: transform 0.3s;
+    /*Recebe a função de transição, e suavisa a transição em .03s*/
 }
 
 /*Efeito quando passado mouse emcima*/
-header div:hover{
-    transform: scale(1.1); /*Escala de transição de 1.1*/
+header div:hover {
+    transform: scale(1.1);
+    /*Escala de transição de 1.1*/
 
 }
 
-header div img{
-    width: 100%; /* 100% da imagem*/
+header div img {
+    width: 100%;
+    /* 100% da imagem*/
     border-radius: 50%;
 
 }
@@ -66,7 +72,7 @@ header div img{
 
 /** main* asterisco seletor, seleciona tudo dentro do main**/
 main * {
-   /** border: 1px solid red;
+    /** border: 1px solid red;
     /**Insere uma borda em todos os elementos do HTML**/
 
 }
@@ -76,20 +82,23 @@ main {
     /**Largura maxima **/
     width: 90%;
     /**Caso a tela seja menor, ocupa 90% da tela*/
-    margin: 32px auto; /*Margem de 32px encima e embaixo, e auto nas laterais*/
+    margin: 32px auto;
+    /*Margem de 32px encima e embaixo, e auto nas laterais*/
 
 
     /* display: flex; 
     flex-direction: column; alinha os elementos como coluna  */
-    
-    display: grid; /*Alternativa aos comandos acima, mesmo resultado */
+
+    display: grid;
+    /*Alternativa aos comandos acima, mesmo resultado */
     gap: 24px;
 }
 
 section {
     color: white;
 
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%); /*Cor de fundo, efeito */
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    /*Cor de fundo, efeito */
     padding-top: 4px;
     border-radius: 10px;
 }
@@ -105,36 +114,39 @@ section h2 {
     letter-spacing: -0.47px;
 }
 
-section p{
+section p {
     letter-spacing: 0.18px;
     color: #A1A1AA;
 }
 
 section ul {
     /* Displsy diz respeito a visualização das caixas do html*/
-    display: flex; /* Modifica o alinhamento dos elementos dentro da caixa ul, no caso os li's, as listas*/
-    gap: 16px; /* Só funciona dentro do display flex, ou seja, com elementos lado a lado*/
+    display: flex;
+    /* Modifica o alinhamento dos elementos dentro da caixa ul, no caso os li's, as listas*/
+    gap: 16px;
+    /* Só funciona dentro do display flex, ou seja, com elementos lado a lado*/
 
-    flex-wrap: wrap; /* Gera colunas atomaticamente conforme se carrega mais elementos, delimitado pelo limite da caixa */
+    flex-wrap: wrap;
+    /* Gera colunas atomaticamente conforme se carrega mais elementos, delimitado pelo limite da caixa */
 
     margin-top: 24px;
 }
 
-section ul li{
+section ul li {
     transition: transform 0.3s;
 }
 
-section ul li:hover{
+section ul li:hover {
     transform: scale(1.1);
 }
 
 /*Classe games-list*/
-.games-list img{
+.games-list img {
     width: 90px;
     border-radius: 8px;
 }
 
-.channel-list img{
+.channel-list img {
     border-radius: 50%;
     width: 70px;
     border: 1px solid #443E54;
@@ -142,33 +154,35 @@ section ul li:hover{
 
 /*  Animação  */
 
-header div{
+header div {
     /*backwards inicia as propriedades de animação imediatamente*/
-    animation: fromTop .7s .2s backwards; /*Segunda propriedade diz respeito ao delay */
+    animation: fromTop .7s .2s backwards;
+    /*Segunda propriedade diz respeito ao delay */
 
 }
 
-main section{
-    animation: fromBottom .7s backwards; /*Traz a animação previamente*/
+main section {
+    animation: fromBottom .7s backwards;
+    /*Traz a animação previamente*/
 }
 
 /*Seleciona os "filhos" neste caso pega o filho 1*/
-main section:nth-child(1){
+main section:nth-child(1) {
     animation-delay: 0;
 }
 
-main section:nth-child(2){
+main section:nth-child(2) {
     animation-delay: .4s;
 }
 
-main section:nth-child(3){
+main section:nth-child(3) {
     animation-delay: .8s;
 }
 
 /*Função que inicia a animação, define um nome para animação, 
     indica onde começa e onde termina
     */
-@keyframes fromTop{
+@keyframes fromTop {
     from {
         opacity: 0;
         transform: translateY(-30px);
@@ -176,21 +190,24 @@ main section:nth-child(3){
 
     to {
         opacity: 1;
-        transform: translateY(0); /*Eixo Y, move até Zero, que o lugar onde já está*/
+        transform: translateY(0);
+        /*Eixo Y, move até Zero, que o lugar onde já está*/
     }
 }
 
 
 /*Animação dos  cartões de baixo pra cima*/
-@keyframes fromBottom{
+@keyframes fromBottom {
     from {
         opacity: 0;
-        transform: translateY(30px); /*Joga 30px pra baixo depois sobe*/
+        transform: translateY(30px);
+        /*Joga 30px pra baixo depois sobe*/
     }
 
     to {
         opacity: 1;
-        transform: translateY(0); /*Eixo Y, move até Zero, que o lugar onde já está*/
+        transform: translateY(0);
+        /*Eixo Y, move até Zero, que o lugar onde já está*/
     }
 }
 
