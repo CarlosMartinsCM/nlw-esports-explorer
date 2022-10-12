@@ -6,7 +6,7 @@
 
 Projeto construido no evento Next Level Week Rocketseat 
 
-[🔗 Clique aqui para acessar](https://carlosmartinsifpr2020.github.io/nlw-esports-explorer/)
+[🔗 Clique aqui para acessar](https://carlosmartinsCM.github.io/nlw-esports-explorer/)
 
 ## 🧰 Tecnologias
 
